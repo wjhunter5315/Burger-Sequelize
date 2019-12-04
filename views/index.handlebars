@@ -1,0 +1,24 @@
+<h1>Burger-Logger</h1>
+
+<p>Burger List</p>
+<ul>
+    {{#each burgers}}
+    <li>
+        <p><span class="label">ID:</span>{{id}}</p>
+        <p><span class="label">BURGER:</span>{{burger_name}}</p>
+    </li>
+    <img src="../public/assets/images/burger.png" alt="burger icon">
+    <button onclick="eatBurger" id="devourBtn">Devour</button>
+    {{/each}}
+</ul>
+
+<h2>Add Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="auth">Burger Name</label>
+    <input type="text" id="burgName" name="burger_name">
+  </div>
+
+  <button onclick="insertBurger" type="submit" id="addBtn">Add to List</button>
+</form>
