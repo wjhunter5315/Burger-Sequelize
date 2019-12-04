@@ -5,6 +5,7 @@
 // *** Dependencies
 // =============================================================
 var express = require("express");
+var exphbs  = require('express-handlebars');
 
 // Sets up the Express App
 // =============================================================
@@ -19,7 +20,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Static directory
-app.use(express.static("views"));
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 // Routes
 // =============================================================
