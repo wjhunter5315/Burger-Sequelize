@@ -5,7 +5,9 @@ CREATE TABLE burgers (
     id INT NOT NULL AUTO_INCREMENT,
     burger_name VARCHAR (100) NOT NULL,
     devoured BOOLEAN DEFAULT 0,
-    PRIMARY KEY (id)
+    PRIMARY KEY (id),
+    createdAt NULL,
+    updatedAt NULL,
 );
 INSERT INTO burgers (burger_name) VALUES ("Double-Double");
 

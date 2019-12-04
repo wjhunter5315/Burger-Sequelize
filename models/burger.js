@@ -17,7 +17,7 @@ module.exports = function(sequelize, Sequelize) {
 //     devour: {
 //         type: Sequelize.BOOLEAN,
 //         defaultValue: 0,
-//     }
+//     }    
 // });
 
 // Burger.sync();

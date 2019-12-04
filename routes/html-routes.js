@@ -1,8 +1,8 @@
-var path = require("path");
-var exphbs  = require("../server.js");
-module.exports = function(htmlRoute) {
+var path = require("../models/index.js");
+// var exphbs  = require("../server.js");
 
-    htmlRoute.get("/", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/views"));
+module.exports = function(app) {
+    app.get("/", function(req, res) {
+        res.render("index");
     });
 }
